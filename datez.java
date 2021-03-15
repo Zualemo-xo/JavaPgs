@@ -1,69 +1,67 @@
-package j17_02_2021;
+package j_15_03_2021;
+import java.util.*;
+import java.text.*;
+import java.time.*;
+import java.text.*;
+import java.time.LocalDate;  
 
-import java.util.Scanner;
-
-class date{
-	int day;
-	int month;
-	int year;
-	String name;
-	 Scanner s = new Scanner(System.in);
-
-	date()
-	{
-		//assume asc order of dates
-	    System.out.println("Enter d,m,y,name: ");
-		day=s.nextInt();
-		month=s.nextInt();
-		year=s.nextInt();
-		name=s.next();
-	}
-	void findday()
-	{
-		String s[]={"monday","tuesday","wednesday","thursday","friday","saturday","sunday"};
-	    System.out.println("3 days after day is:");
-		for(int i=0;i<s.length;i++)
-		{
-			if(name.equals(s[i]))
-			{
-				i+=3;
-				if(i>s.length)
-				{
-					i-=s.length;
-				}
-			    System.out.println(s[i]);
-			    break;
-
-			}
-		}
-		
-	}
-	void difference(date d1)
-	{
-		int d=d1.day-day;
-		int m=(d1.month-month)*31;
-		int y=(d1.year-year)*365;
-		int dz=d+m+y;
-	    System.out.println("Diff btwn d,m,y is:"+dz);
-
-	}
-	void display()
-	{
-	    System.out.println("Date is"+day+"/"+month+"/"+year);
-	}
-}
 public class datez {
 
+	static void chkregno(String rno,String dojyr)
+	{
+		 String ryr=rno.substring(0, 2);
+		 Date dnow = new Date();
+		 int year=dnow.getYear()+1900;
+		 //System.out.println(year);
+		 String yr=String.valueOf(year);
+		 String cyr=yr.substring(2);
+		 if(dojyr.equals(ryr))
+		 {
+			 Integer yearz=Integer.valueOf(cyr)-Integer.valueOf(ryr);
+			 //System.out.printf("%d th year /n",yearz);
+			 System.out.println(yearz+" year ");
+		 }
+		 else
+		 {
+			 System.out.println("Invalid"); 
+		 }
+	}
+	static void birth(LocalDate dobirth)
+	{
+		LocalDate present=LocalDate.now();
+		//int year=;
+	      //SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
+	      //Date date = formatter.parse(dobirth);
+		 //System.out.println(date);
+		 int age=Period.between(dobirth, present).getYears();
+		 int agem=Period.between(dobirth, present).getMonths();
+		 int aged=Period.between(dobirth, present).getDays();
+		 System.out.println("Age:"+age+" years "+agem+" months "+aged+" days "); 
+
+	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		 Scanner s = new Scanner(System.in);
-		 date d1=new date();
-		 date d2=new date();
-		 d1.findday();
-		 d2.findday();
-		 d1.difference(d2);
-		 d1.display();
-		 d2.display();
+		 System.out.println("Enter register no: ");
+		 String rno=s.next();
+		 System.out.println("Enter name: ");
+		 String name=s.next();
+		 System.out.println("Enter date of join as dd mm yy: ");
+		 int dojd=s.nextInt();
+		 int dojm=s.nextInt();
+		 String dojy=s.next();
+		 
+		 System.out.println("Enter date of birth as dd mm yy: ");
+		 int dobd=s.nextInt();
+		 int dobm=s.nextInt();
+		 int doby=s.nextInt();
+		 System.out.println("Enter date of birth full yyyy: ");
+		 int dobyyyy=s.nextInt();
+		 LocalDate dobirth =LocalDate.of(dobyyyy,dobm,dobd);
+		 
+		 //System.out.println(dobirth);
+		 chkregno(rno,dojy);
+		 birth(dobirth);
 	}
 
 }
