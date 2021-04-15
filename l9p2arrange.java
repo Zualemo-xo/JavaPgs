@@ -16,7 +16,7 @@ public class l9p2arrange {
 		String words[]=new String[50];
 		try 
 		{
-		  f = new BufferedReader(new FileReader("E:/Eclipse/Data/JAVA LAB/src/week9/inputL9.txt"));
+		  f = new BufferedReader(new FileReader("./inputL9.txt"));
 
 		}
 		//InputStream f = new FileInputStream ("../q1.txt");
@@ -102,7 +102,7 @@ public class l9p2arrange {
 	  //write into file
 	  
 		 try {
-			PrintWriter pw = new PrintWriter(new FileWriter("E:/Eclipse/Data/JAVA LAB/src/week9/q2OUTPUT.txt", true)); //true USED TO APPEND CONTENT
+			PrintWriter pw = new PrintWriter(new FileWriter("./q2OUTPUT.txt", true)); //true USED TO APPEND CONTENT
 			for(int i=0;i<cnt2;i++)
 			pw.println(scaps[i]);
 			
