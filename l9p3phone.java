@@ -25,7 +25,7 @@ public class l9p3phone {
 			 String price=s.next();
 
 			 try {
-			PrintWriter pw = new PrintWriter(new FileWriter("E:/Eclipse/Data/JAVA LAB/src/week9/q3.txt", true)); //true USED TO APPEND CONTENT
+			PrintWriter pw = new PrintWriter(new FileWriter("./q3.txt", true)); //true USED TO APPEND CONTENT
 			pw.println(model);
 			pw.println(brand);
 			pw.println(year);
@@ -56,7 +56,7 @@ public class l9p3phone {
 		 int tprice=0,cntprice=0;
 		 try 
 		 {
-			  f = new BufferedReader(new FileReader("E:/Eclipse/Data/JAVA LAB/src/week9/q3.txt"));
+			  f = new BufferedReader(new FileReader("./q3.txt"));
 		 }
 		catch (FileNotFoundException fe) 
 	     {              
