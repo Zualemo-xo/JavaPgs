@@ -1,0 +1,20 @@
+class Main {
+  public static void main(String[] args) {
+
+    try {
+	Scanner s = new Scanner(System.in);
+	System.out.println("Enter n and m:");
+	int n=s.nextInt();
+	int m=s.next();
+      int divideByZero = n / 0;
+      System.out.println("Rest of code in try block");
+    }
+    
+    catch (ArithmeticException e) {
+      System.out.print("ArithmeticException => " + e.getMessage());
+    }
+    catch (Exception e) {
+      System.out.print("Exception");
+    }
+  }
+}
