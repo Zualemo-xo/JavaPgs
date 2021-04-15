@@ -15,8 +15,7 @@ public class l9p1read {
 		String words[]=new String[50];
 		try 
 		{
-		//f = new FileInputStream ("E:/Eclipse/Data/JAVA LAB/src/week9/q1.txt");
-		  f = new BufferedReader(new FileReader("E:/Eclipse/Data/JAVA LAB/src/week9/q1.txt"));
+		  f = new BufferedReader(new FileReader("./q1.txt"));
 
 		}
 		//InputStream f = new FileInputStream ("../q1.txt");
