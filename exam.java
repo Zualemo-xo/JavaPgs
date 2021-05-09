@@ -1,3 +1,12 @@
+/*
+Consider the online examination conducted by code tantra.  
+•	Set of questions are maintained  using HASH MAP/HASH TABLE( like Question Number ( Q1,Q2,Q3…Q9) as a key and Question text as a value).  Question text  will be like Java program  using thread, java program using exception, java program using arraylist.
+•	Create Student class with the details like Reg no, and array of question numbers( maximum three questions of any choice.),marks array,total marks.( question number should not be repeated for a single student)
+•	 Create a text file by every student which comprised of the Java code for all three question . first line Question number and next line onwards  answer.
+•	Evaluate the answer script using the keywords in the question paper. For example If the question comprised of java program using thread , search for the keyword thread in the answer. If it is there give the marks as 10 . If the answer contains “public static void main( stringa[]) and no matching keywords the n marks as 5. if the answer  does not have either “public static void main( string a[]) and matching keywords , then marks as 0.
+•	Store the marks and total marks of every student  in the student class . Print the mark list of all  students and display the class average.
+
+*/
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
